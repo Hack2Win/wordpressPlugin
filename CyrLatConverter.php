@@ -20,19 +20,16 @@ function CyrLatConverter_init() {
 	$permalink_hash              = ( $cyrlatconverter_options['permalink_hash'] === 'permalink_hash' ) ? 'true' : 'false';
 	$ignore_classes              = $cyrlatconverter_options['ignore_classes'];
 	$enable_header               = ( $cyrlatconverter_options['enable_header'] === 'enable_header' ) ? false : true;
-//	var_dump( $enable_header );
-//	if ( $enable_header ) {
-//		add_action( 'wp_head', 'hook_header' );
-//	}
+
 
 	?>
     <script>
-        console.log("<?php echo $button_selector_for_cyr ?>");
-        console.log("<?php echo $button_selector_for_lat ?>");
-        console.log("<?php echo $button_selector_for_default ?>");
-        console.log("<?php echo $permalink_hash ?>");
-        console.log("<?php echo $ignore_classes ?>");
-        console.log("<?php echo $enable_header ?>");
+        //console.log("<?php //echo $button_selector_for_cyr ?>//");
+        //console.log("<?php //echo $button_selector_for_lat ?>//");
+        //console.log("<?php //echo $button_selector_for_default ?>//");
+        //console.log("<?php //echo $permalink_hash ?>//");
+        //console.log("<?php //echo $ignore_classes ?>//");
+        //console.log("<?php //echo $enable_header ?>//");
 
 
         let CyrLat = new CyrLatConverter('body').init({
