@@ -83,13 +83,13 @@ class CyrLatConverter {
 			'cyrlatconverter_setting_section' // section
 		);
 
-//		add_settings_field(
-//			'ignore_classes', // id
-//			'Ignore Classes', // title
-//			array( $this, 'ignore_classes_callback' ), // callback
-//			'cyrlatconverter-admin', // page
-//			'cyrlatconverter_setting_section' // section
-//		);
+		add_settings_field(
+			'ignore_classes', // id
+			'Ignore Classes', // title
+			array( $this, 'ignore_classes_callback' ), // callback
+			'cyrlatconverter-admin', // page
+			'cyrlatconverter_setting_section' // section
+		);
 		add_settings_field(
 			'enable_header', // id
 			'Enable Header', // title

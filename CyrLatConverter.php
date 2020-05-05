@@ -21,7 +21,8 @@ function CyrLatConverter_init() {
 	$ignore_classes              = $cyrlatconverter_options['ignore_classes'];
 	$enable_header               = ( $cyrlatconverter_options['enable_header'] === 'enable_header' ) ? false : true;
 
-
+	$ignore_classes_array = explode( ',', $ignore_classes );
+	$js_array             = json_encode( $ignore_classes_array );
 	?>
     <script>
         //console.log("<?php //echo $button_selector_for_cyr ?>//");
@@ -32,13 +33,16 @@ function CyrLatConverter_init() {
         //console.log("<?php //echo $enable_header ?>//");
 
 
+		<?php        echo "var javascript_array = " . $js_array . ";\n";?>
+        // console.log(javascript_array);
+
         let CyrLat = new CyrLatConverter('body').init({
             onClickCyr: '<?php echo $button_selector_for_cyr ?>',
             onClickLat: '<?php echo $button_selector_for_lat ?>',
             onClickDefault: '<?php echo $button_selector_for_default ?>',
             cookieDuration: 7,
             usePermalinkHash:<?php echo $permalink_hash ?> ,
-            ignoreClasses: ['ignore'],
+            ignoreClasses: javascript_array,
             benchmark: true,
             benchmarkEval: "document.getElementById('exctime').innerHTML = '%s%';"
         });
