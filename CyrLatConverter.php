@@ -14,11 +14,11 @@ function plugin_scripts_init() {
 
 function CyrLatConverter_init() {
 	$cyrlatconverter_options     = get_option( 'cyrlatconverter_option_name' );
-	$button_selector_for_cyr     = $cyrlatconverter_options['button_selector_for_cyr_0'];
-	$button_selector_for_lat     = $cyrlatconverter_options['button_selector_for_lat_1'];
-	$button_selector_for_default = $cyrlatconverter_options['button_selector_for_default_2'];
-	$permalink_hash              = ( $cyrlatconverter_options['permalink_hash_3'] === 'permalink_hash_3' ) ? 'true' : 'false';
-	$ignore_classes              = $cyrlatconverter_options['ignore_classes_4'];
+	$button_selector_for_cyr     = $cyrlatconverter_options['button_selector_for_cyr'];
+	$button_selector_for_lat     = $cyrlatconverter_options['button_selector_for_lat'];
+	$button_selector_for_default = $cyrlatconverter_options['button_selector_for_default'];
+	$permalink_hash              = ( $cyrlatconverter_options['permalink_hash'] === 'permalink_hash' ) ? 'true' : 'false';
+	$ignore_classes              = $cyrlatconverter_options['ignore_classes'];
 	$enable_header               = ( $cyrlatconverter_options['enable_header'] === 'enable_header' ) ? false : true;
 //	var_dump( $enable_header );
 //	if ( $enable_header ) {
